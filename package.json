@@ -1,0 +1,28 @@
+{
+  "name": "lab-09-api-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/401-advanced-javascript-ibrahim/lab-09-api-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/401-advanced-javascript-ibrahim/lab-09-api-server/issues"
+  },
+  "homepage": "https://github.com/401-advanced-javascript-ibrahim/lab-09-api-server#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "express": "^4.17.1",
+    "jest": "^25.1.0",
+    "mongoose": "^5.8.10",
+    "morgan": "^1.9.1"
+  }
+}
