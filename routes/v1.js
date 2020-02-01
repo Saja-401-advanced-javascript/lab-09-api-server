@@ -5,7 +5,13 @@ const router = express.Router();
 
 const categories = require('../models/categories/categories.js');
 const products = require('../models/products/products.js');
-
+/**
+ * returns the route you trying to hit
+ * @param {object} req 
+ * @param {object} res 
+ * @param {*} next 
+ * @returns {string}
+ */
 function getModel(req, res, next) {
     let model = req.params.model;
 
@@ -30,6 +36,9 @@ router.post('api/v1/:model', createModel)
 router.put('api/v1/:model/:id', updateModel)
 router.delete('api/v1/:model/:id', deleteModel)
 
+/**
+ * The REST version of get method
+ */
 function getAllModel(req, res, next) {
     req.model.get()
         .then(results => {
@@ -49,6 +58,9 @@ function getOneModel(req, res, next) {
         .catch(next)
 }
 
+/**
+ * The REST version of create method
+ */
 function createModel(req, res, next) {
     let record = req.body
     req.model
@@ -59,6 +71,9 @@ function createModel(req, res, next) {
         .catch(next)
 }
 
+/**
+ * The REST version of update method
+ */
 function updateModel(req, res, next) {
     let record = req.body
     let _id = req.params.id
@@ -69,6 +84,9 @@ function updateModel(req, res, next) {
         .catch(next)
 }
 
+/**
+ * The REST version of delete method
+ */
 function deleteModel(req, res, next) {
     let _id = req.params.id
     req.model.delete(_id)
@@ -77,3 +95,5 @@ function deleteModel(req, res, next) {
         })
         .catch(next)
 }
+
+module.exports = router;
