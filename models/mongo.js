@@ -1,30 +1,36 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable camelcase */
+/* eslint-disable new-cap */
+/* eslint-disable no-undef */
+/* eslint-disable strict */
 'use strict';
 
 class Model_CRUD {
-    constructor(schema) {
-        this.schema
-    }
+  constructor(schema) {
+    this.schema = schema;
+  }
 
-    get(id) {
-        if (id) {
-            return this.schema.find(id)
-        } else {
-            return this.schema.find({})
-        }
+  get(_id) {
+    if (_id) {
+      return this.schema.find({ _id });
+    } else {
+      return this.schema.find({});
     }
+  }
 
-    create(obj) {
-        let newObject = new this.schema(obj)
-        return newObject.save()
-    }
+  create(obj) {
+    let newObject = new this.schema(obj);
+    return newObject.save();
+  }
 
-    update(id, updatedObj) {
-        return this.schema.findByIdAndUpdate(id, updatedObj)
-    }
+  update(_id, updatedObj) {
+    return this.schema.findByIdAndUpdate(_id, updatedObj, { new: true });
+  }
 
-    delete(id) {
-        return this.schema.findByIdAndDelete(id)
-    }
+  delete(_id) {
+    return this.schema.findByIdAndDelete(_id);
+  }
 }
 
 module.exports = Model_CRUD;
