@@ -6,7 +6,7 @@
 
 ### Links and Resources
 
-* [submission PR](https://github.com/401-advanced-javascript-ibrahim/lab-09-api-server/pull/1)
+* [submission PR](https://github.com/401-advanced-javascript-ibrahim/lab-09-api-server/pull/2)
 * [ci/cd](https://github.com/401-advanced-javascript-ibrahim/lab-09-api-server/actions) (GitHub Actions)
 
 ### Setup
