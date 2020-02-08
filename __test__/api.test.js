@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable camelcase */
 /* eslint-disable no-undef */
 /* eslint-disable strict */
@@ -148,5 +149,23 @@ describe('Products API', () => {
               });
           });
       });
+  });
+});
+
+describe('Middleware functions', () => {
+  it('response to the worng path', () => {
+    return mockRequest.get('api/foo')
+      .then((results) => {
+        expect(results.status).toBe(404);
+      })
+      .catch(console.error);
+  });
+  it('response to the server issues', () => {
+    return mockRequest
+      .get('api/v1/anything')
+      .then((results) => {
+        expect(results.status).toBe(500);
+      })
+      .catch(console.error);
   });
 });
