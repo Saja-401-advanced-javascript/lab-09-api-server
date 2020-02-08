@@ -31,3 +31,9 @@
 
 ![](assesst/IMG_20200201_173147.jpg)
 
+
+
+* I prefer naming model.js instead of monogo to be more clear.
+* test your middleware functions.
+* you need to add swagger api doc.
+
